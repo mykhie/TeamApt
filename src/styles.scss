@@ -1,3 +1,5 @@
+@import "assets/styles/variable";
+
 body {
   min-height: 100vh;
   background-color: lightgrey;
@@ -15,4 +17,12 @@ main {
   max-height: 100vh;
   overflow-x: auto;
   overflow-y: hidden;
+}
+
+.text-purple {
+  color: $purple;
+}
+.bg-purple,.bg-purple:hover{
+  background-color: $purple;
+  color: white;
 }
