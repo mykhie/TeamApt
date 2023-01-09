@@ -1,0 +1,85 @@
+<div class="container scale-in-center">
+  <div class="row px-2 py-5">
+    <div class="col-auto align-self-center">
+      <div class="display-6 fw-bolder">
+        <i class="bi-chevron-left bi"></i> Add Weight
+      </div>
+    </div>
+    <div class="col text-end">
+      <i class="bi bi-sliders display-6"></i>
+    </div>
+  </div>
+
+  <div class="row pt-2 pb-4">
+
+    <div class="col-8 mx-auto">
+      <div class="card rounded-4 border-0 bg-purple">
+        <div class="card-body row ">
+          <div class="col text-center py-4">
+            <div class="display-1  fw-bold">51,4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 col-md-4">
+      <div class="card rounded-4 border-0" [class.selected]="gender==='male'">
+        <div class="card-body row ">
+
+          <div class="col text-center " (click)="updateGender('male')">
+            <div class="fs-3 fw-bold">Male</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4">
+      <div class="card rounded-4 border-0" [class.selected]="gender==='female'">
+        <div class="card-body row">
+
+          <div class="col pe-0 text-center py-0">
+            <div class="text-nowrap" (click)="updateGender('female')">
+              <span class="fs-3 fw-bold">Female</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="row py-4">
+
+    <div class="col-6 col-md-4">
+      <div class="card rounded-4 border-0">
+        <div class="card-header border-0 rounded-4 bg-white">
+          Age <i class="bi bi-gear float-end text-muted"></i>
+        </div>
+        <div class="card-body row ">
+
+          <div class="col text-center">
+            <div class="display-2 fw-bold">21</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4">
+      <div class="card rounded-4 border-0">
+        <div class="card-header border-0 rounded-4 bg-white text-nowrap">
+          Height <i class="bi bi-gear float-end text-muted"></i>
+        </div>
+        <div class="card-body row ">
+
+          <div class="col text-center">
+            <div class="display-2 fw-bold">173</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row p-4">
+    <button class="col rounded-4 btn btn-lg bg-purple">Save</button>
+  </div>
+</div>

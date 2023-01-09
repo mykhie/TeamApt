@@ -1,49 +1,53 @@
-<nav class=" fixed-bottom  text-white py-2 navbar-dark bg-white text-muted">
+<nav class=" fixed-bottom  text-white py-3 navbar-dark bg-white text-muted">
 
   <div class="container text-center">
     <div class="row row-cols-5 py-0">
       <div class="col ">
-        <a href="" class="text-muted ">
+        <a [routerLink]="['/']" class="text-muted ">
           <i class="bi bi-house-door " style="font-weight: bold"></i>
         </a>
       </div>
       <div class="col ">
-        <i class="bi bi-bar-chart-steps  "></i>
+        <a [routerLink]="['/history']" class="text-muted ">
+          <i class="bi bi-bar-chart-steps  "></i>
+        </a>
       </div>
 
       <div class="col dropup-center ">
 
         <span type="button" class="btn bg-purple rounded-circle p-3 add-button  " data-bs-toggle="dropdown"
-                aria-expanded="false">
+              aria-expanded="false">
           <i class="bi bi-plus-lg px-1"></i>
         </span>
-        <ul class="dropdown-menu p-3 rounded-5 ">
-          <li>
-            <a class="dropdown-item py-4 align-self-center rounded-4" href="#">
-              <i class="bi bi-heart-pulse text-purple"></i>
-              <span class="ps-3">Add blood pressure</span>
-            </a>
-          </li>
-          <li>
-            <a class="dropdown-item py-4 align-self-center rounded-4" href="#">
-              <i class="bi bi-clipboard text-purple"></i>
-              <span class="ps-3">Add weight measurement</span>
-            </a>
-          </li>
-          <li>
-            <a class="dropdown-item py-4 align-self-center rounded-4" href="#">
-              <i class="bi bi-bicycle text-purple"></i>
-              <span class="ps-3">Add Activity</span>
-            </a>
-          </li>
-          <li>
-            <a class="dropdown-item py-4 align-self-center rounded-4" href="#">
-              <i class="bi bi-smartwatch text-purple"></i>
-              <span class="ps-3">Track my workout</span>
-            </a>
-          </li>
+        <div class="scale-in-bottom">
+          <ul class="dropdown-menu bubble4 p-3 border-0 rounded-5 ">
+            <li class="scale-in-bottom">
+              <a class="dropdown-item py-4 align-self-center rounded-4" href="#">
+                <i class="bi bi-heart-pulse text-purple"></i>
+                <span class="ps-3">Add blood pressure</span>
+              </a>
+            </li>
+            <li class="scale-in-bottom">
+              <a class="dropdown-item py-4 align-self-center rounded-4" [routerLink]="['/add-weight']">
+                <i class="bi bi-clipboard text-purple"></i>
+                <span class="ps-3">Add weight measurement</span>
+              </a>
+            </li>
+            <li class="scale-in-bottom">
+              <a class="dropdown-item py-4 align-self-center rounded-4" href="#">
+                <i class="bi bi-bicycle text-purple"></i>
+                <span class="ps-3">Add Activity</span>
+              </a>
+            </li>
+            <li class="scale-in-bottom">
+              <a class="dropdown-item py-4 align-self-center rounded-4" href="#">
+                <i class="bi bi-smartwatch text-purple"></i>
+                <span class="ps-3">Track my workout</span>
+              </a>
+            </li>
 
-        </ul>
+          </ul>
+        </div>
       </div>
 
 

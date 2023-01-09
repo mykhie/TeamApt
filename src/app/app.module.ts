@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { HomeComponent } from './main/home/home.component';
+import { AddWeightComponent } from './main/add-weight/add-weight.component';
+import { HistoryComponent } from './main/history/history.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    AddWeightComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,

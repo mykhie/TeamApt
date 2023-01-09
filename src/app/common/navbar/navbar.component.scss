@@ -1,4 +1,5 @@
 @import "./src/assets/styles/variable";
+
 .add-button {
   margin-top: -5em !important;
 
@@ -16,48 +17,65 @@
   transform: translate(-50%, 0);
 }
 
-.dropdown-item:hover,.dropdown-item:focus,.dropdown-item .active {
+.dropdown-item:hover, .dropdown-item:focus, .dropdown-item .active {
   background-color: $purple;
   color: white;
 }
 
 
-.scale-in-ver-bottom {
-  -webkit-animation: scale-in-ver-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: scale-in-ver-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.scale-in-bottom {
+  -webkit-animation: scale-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-@-webkit-keyframes scale-in-ver-bottom {
+
+@-webkit-keyframes scale-in-bottom {
   0% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
     opacity: 1;
   }
   100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
     opacity: 1;
   }
 }
-@keyframes scale-in-ver-bottom {
+
+@keyframes scale-in-bottom {
   0% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
     opacity: 1;
   }
   100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
     opacity: 1;
   }
 }
 
+.bubble4 {
 
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 13px solid transparent;
+    border-top-color: white;
+    border-bottom: 0;
+    margin-left: -13px;
+    margin-bottom: -13px;
+  }
+}
