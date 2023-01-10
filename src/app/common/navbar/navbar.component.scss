@@ -17,7 +17,7 @@
   transform: translate(-50%, 0);
 }
 
-.dropdown-item:hover, .dropdown-item:focus, .dropdown-item .active {
+.dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active {
   background-color: $purple;
   color: white;
 }
@@ -78,4 +78,10 @@
     margin-left: -13px;
     margin-bottom: -13px;
   }
+}
+.rounded-top-nav{
+  border-radius: 2em 2em 0 0;
+}
+.dropdown-menu{
+  width: 23em;
 }
