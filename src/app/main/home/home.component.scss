@@ -1,9 +1,10 @@
 
 .bi {
-  font-size: 20px!important;
+  font-size: 20px !important;
 }
-.bi-play-circle-lg{
-  font-size: 30px!important;
+
+.bi-play-circle-lg {
+  font-size: 30px !important;
   color: #67ff27;
 }
 
@@ -24,6 +25,7 @@
     opacity: 1;
   }
 }
+
 @keyframes fade-in-bottom {
   0% {
     -webkit-transform: translateY(50px);
@@ -37,7 +39,19 @@
   }
 }
 
+.dotted-line {
+  margin-bottom: -2em;
+  border-bottom-style: dashed !important;
+}
 
+.graph-bar {
+  height: 11.5em;
+  width: 1.4em;
+}
+
+.graph-bar  .scale-in-bottom {
+  border-radius: 50rem 50rem 25rem 25rem!important;
+}
 
 
 
