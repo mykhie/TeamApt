@@ -1,6 +1,6 @@
-
 @import "src/assets/styles/variable";
-.div-weight{
+
+.div-weight {
 
 }
 
@@ -8,6 +8,75 @@
   box-sizing: border-box;
 }
 
-.selected{
+.selected {
   border: 2px solid $light-green !important;
+}
+
+.graph-bar {
+  height: 5em;
+  width: 0.9em;
+}
+
+.graph-bar .bg-light-green {
+  width: 0.2em !important;
+}
+
+.graph-bar .scale-in-bottom {
+  border-radius: 50rem 50rem 25rem 25rem !important;
+}
+
+.ribbon {
+  width: 100%;
+  position: relative;
+  height: 105px;
+  z-index: 2;
+  margin-top: -2.5em;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-radius: 50%;
+}
+
+.slide-in-right {
+  -webkit-animation: slide-in-right 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-right 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.bar-height-short {
+  height: 50%;
+  align-items: self-end;
+}
+
+.bar-height-long {
+  height: 90%;
+}
+
+.curved-div {
+  height: 100%;
+  border-radius: 63% 63% 0 0
 }
