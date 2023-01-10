@@ -1,4 +1,6 @@
-<div class=" scale-in-center">
+<div class=" scale-in-center " (click)="back()"
+[class.slide-out-bottom]="exit"
+>
   <div class="container  bg-white">
     <div class="row px-2 py-5">
       <div class="col-auto align-self-center">
@@ -113,7 +115,8 @@
     </div>
 
     <div class="row p-4">
-      <button class="col rounded-4 btn btn-lg bg-purple">Save</button>
+      <button (click)="back()"
+        class="col rounded-4 btn btn-lg bg-purple">Save</button>
     </div>
   </div>
 </div>

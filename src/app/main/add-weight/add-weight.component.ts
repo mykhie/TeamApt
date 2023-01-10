@@ -1,4 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {NavigationService} from '@app//services/navigation.service';
 
 @Component({
   selector: 'app-add-weight',
@@ -9,6 +11,7 @@ export class AddWeightComponent implements OnInit {
   gender: string | undefined;
   days: any = Array.from(Array(40).keys());
   currentWeight = 56.4;
+  exit: boolean = false;
 
   updateGender(gender: string) {
     this.gender = gender;
@@ -19,14 +22,19 @@ export class AddWeightComponent implements OnInit {
     this.currentWeight = elem;// >= 2 ? elem / 10 : elem;
   }
 
-  ngOnInit() {
-    let elem = document.querySelector('.bars');
-    elem.scrollLeft += this.currentWeight;
-    this.scrollToCurrentDiv()
+  constructor(private router: Router, public navigationService: NavigationService) {
+  }
+
+  ngOnInit(): void {
+    this.navigationService.showMenuUpdate(false);
   }
 
 
-  scrollToCurrentDiv() {
-    console.warn();
+  back(): void {
+    this.exit = true;
+    this.navigationService.showMenuUpdate(true);
+    setTimeout(() => {
+      this.router.navigate(['/'])
+    }, 700);
   }
 }

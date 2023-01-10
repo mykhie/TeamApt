@@ -7,6 +7,7 @@ import { NavbarComponent } from './common/navbar/navbar.component';
 import { HomeComponent } from './main/home/home.component';
 import { AddWeightComponent } from './main/add-weight/add-weight.component';
 import { HistoryComponent } from './main/history/history.component';
+import { BaseComponent } from './common/base/base.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HistoryComponent } from './main/history/history.component';
     NavbarComponent,
     HomeComponent,
     AddWeightComponent,
-    HistoryComponent
+    HistoryComponent,
+    BaseComponent
   ],
   imports: [
     BrowserModule,
