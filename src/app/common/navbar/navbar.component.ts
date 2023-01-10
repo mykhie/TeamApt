@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  currentUrl: string='';
 
+  currentUrlUpdate(s: string) {
+    this.currentUrl=s;
+  }
 }
