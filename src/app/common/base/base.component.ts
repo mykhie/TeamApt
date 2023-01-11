@@ -30,10 +30,8 @@ export class BaseComponent {
 
   get today() {
     let objToday = new Date();
-
     let weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       dayOfWeek = weekday[objToday.getDay()],
-
       dayOfMonth =   (objToday.getDate() < 10) ? '0' + objToday.getDate()  : objToday.getDate() ,
       months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
       curMonth = months[objToday.getMonth()];

@@ -8,13 +8,9 @@ import {BaseComponent} from "@app//common/base/base.component";
 })
 export class HistoryComponent extends BaseComponent implements AfterViewInit{
   days = [
-    {
-      day :'M',
-      percentage : '50%',
-      class:0
-    },{
+   {
       day :'T',
-      percentage : '10%',
+      percentage : '20%',
       class:1
     },{
       day :'W',
@@ -37,6 +33,11 @@ export class HistoryComponent extends BaseComponent implements AfterViewInit{
       percentage : '70%',
       class:0
     },
+    {
+      day :'M',
+      percentage : '50%',
+      class:0
+    }
   ];
   @ViewChild('weight') w: any;
   ngAfterViewInit() {
