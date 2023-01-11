@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {BaseComponent} from "@app//common/base/base.component";
 
 @Component({
   selector: 'app-history',
   templateUrl: './history.component.html',
   styleUrls: ['./history.component.scss']
 })
-export class HistoryComponent {
+export class HistoryComponent extends BaseComponent implements AfterViewInit{
   days = [
     {
       day :'M',
@@ -37,5 +38,9 @@ export class HistoryComponent {
       class:0
     },
   ];
+  @ViewChild('weight') w: any;
+  ngAfterViewInit() {
+    this.animateValue(this.w, 0, 59.4, 2000);
+  }
 
 }
