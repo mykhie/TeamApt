@@ -1,0 +1,39 @@
+<div class="container ">
+
+  <div class="row px-2 pt-5 pb-3 slide-in-right-fast">
+    <div class="col-auto align-self-center">
+      <div class="display-6 fw-bolder">
+        Messages
+      </div>
+    </div>
+    <div class="col text-end">
+      <i class="bi spinner bi-chat display-6"></i>
+    </div>
+  </div>
+
+  <div class="row py-3 slide-in-right">
+
+    <div class="col-12 my-1" *ngFor="let person of messages;let cnt=index">
+      <div class="card shadow rounded-4 border-0">
+        <div class="card-body row text-nowrap">
+
+          <div class="col-2">
+            <span type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                  class="btn bg-light-purple text-white border-0 rounded-circle p-2 add-button">
+              <i class="bi bi-person-circle px-1"></i>
+            </span>
+          </div>
+          <div class="col align-self-center">
+            <div class="row ps-2" >
+              <div class="col-12 fw-bold">{{person.name}}</div>
+              <div class="col-12 fs-6 text-muted py-0" style="line-height: 1">
+                <small>{{person.msg}}</small>
+                <small class="float-end" >11:0{{cnt}} am</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

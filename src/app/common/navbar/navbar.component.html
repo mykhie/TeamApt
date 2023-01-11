@@ -3,33 +3,33 @@
   <div class="container text-center">
     <div class="row row-cols-5 py-0">
       <div class="col ">
-        <a [routerLink]="['/']"
-           (click)="currentUrlUpdate('')"
-           class="text-muted ">
-          <i class="bi bi-house-door "
-             [class.bi-house-door-fill]="currentUrl===''"
-             [class.bi-house-door]="currentUrl!==''"
 
-             style="font-weight: bold">
+        <a [routerLink]="['/home']"
+
+           class="text-muted ">
+          <i class="bi  "
+             [class.bi-house-door-fill]="isUrlActive('/home')"
+             [class.text-light-purple]="isUrlActive('/home')"
+             [class.bi-house-door]="!isUrlActive('/home')"
+          >
 
           </i>
         </a>
       </div>
       <div class="col ">
         <a [routerLink]="['/history']"
-           (click)="currentUrlUpdate('history')"
            class="text-muted ">
-          <i class="bi bi-bar-chart  "
-             [class.bi-bar-chart-fill]="currentUrl==='history'"
-             [class.bi-bar-chart]="currentUrl!=='history'"
-             (isActiveChange)="currentUrlUpdate('history')"
+          <i class="bi  "
+             [class.bi-bar-chart-fill]="isUrlActive('history')"
+             [class.text-light-purple]="isUrlActive('/history')"
+             [class.bi-bar-chart]="!isUrlActive('history')"
           ></i>
         </a>
       </div>
 
       <div class="col dropup-center ">
 
-        <span type="button" class="btn bg-purple rounded-circle p-3 add-button  " data-bs-toggle="dropdown"
+        <span type="button" class="btn bg-purple border-0 rounded-circle p-3 add-button  " data-bs-toggle="dropdown"
               aria-expanded="false">
           <i class="bi bi-plus-lg px-1"></i>
         </span>
@@ -66,10 +66,25 @@
 
 
       <div class="col ">
-        <i class="bi bi-chat"></i>
+        <a [routerLink]="['/messages']"
+           class="text-muted ">
+          <i class="bi   "
+             [class.bi-chat]="!isUrlActive('messages')"
+             [class.text-light-purple]="isUrlActive('messages')"
+             [class.bi-chat-fill]="isUrlActive('messages')"
+          ></i>
+        </a>
+
       </div>
       <div class="col ">
-        <i class="bi bi-person"></i>
+        <a [routerLink]="['/profile']"
+           class="text-muted ">
+          <i class="bi   "
+             [class.bi-person]="!isUrlActive('profile')"
+             [class.text-light-purple]="isUrlActive('profile')"
+             [class.bi-person-fill]="isUrlActive('profile')"
+          ></i>
+        </a>
       </div>
     </div>
   </div>

@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddWeightComponent } from './main/add-weight/add-weight.component';
 import { HistoryComponent } from './main/history/history.component';
 import { HomeComponent } from './main/home/home.component';
+import { MessagesComponent } from './main/messages/messages.component';
+import { ProfileComponent } from './main/profile/profile.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path:'home',
     component: HomeComponent
   },
   {
@@ -17,6 +19,18 @@ const routes: Routes = [
   {
     path:'history',
     component: HistoryComponent
+  },
+  {
+    path:'messages',
+    component: MessagesComponent
+  },
+  {
+    path:'profile',
+    component: ProfileComponent
+  },
+  {
+    path: '**',
+    redirectTo:'/home'
   }
 ];
 

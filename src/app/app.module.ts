@@ -8,6 +8,8 @@ import { HomeComponent } from './main/home/home.component';
 import { AddWeightComponent } from './main/add-weight/add-weight.component';
 import { HistoryComponent } from './main/history/history.component';
 import { BaseComponent } from './common/base/base.component';
+import { MessagesComponent } from './main/messages/messages.component';
+import { ProfileComponent } from './main/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { BaseComponent } from './common/base/base.component';
     HomeComponent,
     AddWeightComponent,
     HistoryComponent,
-    BaseComponent
+    BaseComponent,
+    MessagesComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 import {NavigationService} from '@app//services/navigation.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class NavbarComponent implements OnInit {
   currentUrl: string = '';
   showMenu: boolean = true;
 
-  constructor(public navigationService: NavigationService) {
+  constructor(public navigationService: NavigationService, private router: Router) {
   }
 
 
@@ -28,6 +29,13 @@ export class NavbarComponent implements OnInit {
 
   hideMenu() {
     this.showMenu = false;
+  }
+
+  isUrlActive(url) {
+    // return url;
+    if (url === '') return true;
+
+    return this.router.url.includes(url);
   }
 
 
