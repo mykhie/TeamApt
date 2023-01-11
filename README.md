@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Application access
 
-To `access` this project,please navigate to `https://genuine-paprenjak-b7b982.netlify.app/`
+To `access` this project,please navigate to [https://genuine-paprenjak-b7b982.netlify.app](https://genuine-paprenjak-b7b982.netlify.app)
 
 ## Application Details
 
