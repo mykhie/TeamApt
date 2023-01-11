@@ -10,6 +10,7 @@ import { HistoryComponent } from './main/history/history.component';
 import { BaseComponent } from './common/base/base.component';
 import { MessagesComponent } from './main/messages/messages.component';
 import { ProfileComponent } from './main/profile/profile.component';
+import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { ProfileComponent } from './main/profile/profile.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {provide : LocationStrategy , useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

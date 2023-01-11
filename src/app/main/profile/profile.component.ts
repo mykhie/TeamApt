@@ -1,6 +1,5 @@
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {BaseComponent} from "@app//common/base/base.component";
-
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
