@@ -1,12 +1,16 @@
 <div class="container ">
   <div class="row px-2 pt-5 pb-3 slide-in-right-fast">
-    <div class="col-auto align-self-center">
+    <div class="col align-self-center">
       <div class="display-6 fw-bolder">
         History
       </div>
     </div>
-    <div class="col text-end">
-      <i class="bi spinner bi-arrow-repeat display-6"></i>
+    <div class="col-auto text-end">
+      <div class=" p-0"
+           [class.rotating]="rotate"
+           style="text-align: center;">
+        <i class="bi  bi-arrow-repeat display-6 "></i>
+      </div>
     </div>
   </div>
   <div class="row px-2 pb-2 slide-in-right-fast">
@@ -120,7 +124,7 @@
               <span class="display-2 fw-bold ps-1">50</span><small class="text-muted">m</small>
             </div>
           </div>
-          <div class="col mb-4" style="height: 11em">
+          <div class="col mb-3" style="height: 11em">
             <div class="d-flex justify-content-evenly  bd-highlight">
               <div *ngFor="let bar of days"
                    class="p-0 row d-flex justify-content-evenly  "
