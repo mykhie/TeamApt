@@ -10,8 +10,8 @@ import {NavigationService} from '@app//services/navigation.service';
 export class NavbarComponent implements OnInit {
 
 
-  currentUrl: string = '';
-  showMenu: boolean = true;
+  currentUrl = '';
+  showMenu = true;
 
   constructor(public navigationService: NavigationService, private router: Router) {
   }

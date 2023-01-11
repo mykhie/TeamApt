@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./history.component.scss']
 })
 export class HistoryComponent {
-  days: any = [
+  days = [
     {
       day :'M',
       percentage : '50%',

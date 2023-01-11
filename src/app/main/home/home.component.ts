@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  days: any = [
+  days = [
     {
       day :'M',
       percentage : '50%',
@@ -37,6 +37,6 @@ export class HomeComponent {
       class:0
     },
   ];
-  counter: number = 1;
+  counter = 1;
 
 }

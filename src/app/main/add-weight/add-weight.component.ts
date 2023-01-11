@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {NavigationService} from '@app//services/navigation.service';
 
@@ -9,16 +9,16 @@ import {NavigationService} from '@app//services/navigation.service';
 })
 export class AddWeightComponent implements OnInit {
   gender: string | undefined;
-  days: any = Array.from(Array(40).keys());
+  days = Array.from(Array(40).keys());
   currentWeight = 56.4;
-  exit: boolean = false;
+  exit = false;
 
   updateGender(gender: string) {
     this.gender = gender;
   }
 
   onScroll($event: any) {
-    let elem = $event.currentTarget.scrollLeft;
+    const elem = $event.currentTarget.scrollLeft;
     this.currentWeight = elem;// >= 2 ? elem / 10 : elem;
   }
 
