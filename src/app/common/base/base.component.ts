@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Injector, Renderer2, ViewChild} from '@angular/core';
+import {Component, Injector, Renderer2} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ export class BaseComponent {
   public showMenu = true;
   router: Router;
 
-  constructor(injector: Injector,private render: Renderer2) {
+  constructor(injector: Injector, private render: Renderer2) {
     this.router = injector.get(Router);
   }
 
@@ -27,4 +27,18 @@ export class BaseComponent {
     };
     window.requestAnimationFrame(step);
   }
+
+  get today() {
+    let objToday = new Date();
+
+    let weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      dayOfWeek = weekday[objToday.getDay()],
+
+      dayOfMonth =   (objToday.getDate() < 10) ? '0' + objToday.getDate()  : objToday.getDate() ,
+      months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+      curMonth = months[objToday.getMonth()];
+    return  dayOfWeek + " ,"+ dayOfMonth + " " + curMonth;
+  };
+
+
 }
