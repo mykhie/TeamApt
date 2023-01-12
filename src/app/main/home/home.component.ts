@@ -8,11 +8,7 @@ import {BaseComponent} from "@app//common/base/base.component";
 })
 export class HomeComponent extends BaseComponent implements AfterViewInit{
   days = [
-    {
-      day :'M',
-      percentage : '50%',
-      class:0
-    },{
+   {
       day :'T',
       percentage : '30%',
       class:1
@@ -35,6 +31,11 @@ export class HomeComponent extends BaseComponent implements AfterViewInit{
     },{
       day :'S',
       percentage : '70%',
+      class:0
+    },
+    {
+      day :'M',
+      percentage : '50%',
       class:0
     },
   ];
