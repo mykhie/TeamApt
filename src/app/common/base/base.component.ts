@@ -17,7 +17,7 @@ export class BaseComponent {
     let startTimestamp = null;
     const step = timestamp => {
       if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.round(Math.min((timestamp - startTimestamp) / duration, 1));
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
       obj.nativeElement.innerHTML = Math.floor(
         progress * (end - start) + start
       );
